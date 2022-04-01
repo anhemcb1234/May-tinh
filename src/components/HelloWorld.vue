@@ -51,31 +51,26 @@ export default {
         number0() {
             this.total.push(0)
             this.inputValue = 0
-            console.log(this.total)
         },
         number1() {
             this.total.push(1)
             this.inputValue = 1
 
-            console.log(this.total)
         },
         number2() {
             this.total.push(2)
             this.inputValue = 2
 
-            console.log(this.total)
         },
         number3() {
             this.total.push(3)
             this.inputValue = 3
 
-            console.log(this.total)
         },
         number4() {
             this.total.push(4)
             this.inputValue = 4
 
-            console.log(this.total)
         },
         number5() {
             this.total.push(5)
@@ -135,7 +130,9 @@ export default {
         },
         heThongXoa() {
           this.total.pop()
-        
+          let test = this.total.filter(x => Number.isInteger(x))
+          let a = test.pop()
+          this.inputValue = a
         }
     },
     computed: {
