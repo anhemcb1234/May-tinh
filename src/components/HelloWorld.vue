@@ -125,8 +125,10 @@ export default {
         },
         tinh() {
             var result = stringCalculator(this.total.join(''))
-            this.inputValue = result
-            console.log(this.inputValue)
+            this.inputValue = 0
+            this.total = []
+            this.total.push(result)
+
         },
         heThongXoa() {
           this.total.pop()
