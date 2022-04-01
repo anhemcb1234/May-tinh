@@ -3,7 +3,7 @@
     <div id="ket_qua">
         <div style="    position: absolute;
     top: 0;" class="hien_so">
-          <p>{{showNumber}}</p>
+            <p>{{showNumber}}</p>
         </div>
         <div id="ket_qua_cu">
             <input type="text" :value="inputValue">
@@ -88,40 +88,40 @@ export default {
             this.total.push(7)
             this.inputValue = 7
 
-            console.log(this.total)
+        
         },
         number8() {
             this.total.push(8)
             this.inputValue = 8
 
-            console.log(this.total)
+        
         },
         number9() {
             this.total.push(9)
             this.inputValue = 9
 
-            console.log(this.total)
+        
         },
         hetThongCong() {
             this.total.push('+')
-            console.log(this.total)
+        
         },
         heThongTru() {
             this.total.push('-')
-            console.log(this.total)
+        
         },
         heThongNhan() {
             this.total.push('*')
-            console.log(this.total)
+        
         },
         heThongChia() {
             this.total.push('/')
-            console.log(this.total)
+        
         },
         clear() {
             this.total = []
             this.inputValue = 0
-            console.log(this.total)
+        
         },
         tinh() {
             var result = stringCalculator(this.total.join(''))
@@ -131,19 +131,18 @@ export default {
 
         },
         heThongXoa() {
-          this.total.pop()
-          let test = this.total.filter(x => Number.isInteger(x))
-          let a = test.pop()
-          this.inputValue = a
+            this.total.pop()
+            let test = this.total.filter(x => Number.isInteger(x))
+            let a = test.pop()
+            this.inputValue = a
         }
     },
     computed: {
-      showNumber() {
-        return this.total.map(x => x).join("")
-      }
+        showNumber() {
+            return this.total.map(x => x).join("")
+        }
     }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -198,7 +197,13 @@ input {
 .trong:focus {
     outline: 0;
 }
-
+button {
+  transition: background 0.8s;
+}
+button:hover {
+  background: #000;
+  color: #fff;
+}
 button:nth-child(4) {
     font-size: 20px;
     background-color: #20b2aa;
